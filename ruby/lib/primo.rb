@@ -9,5 +9,19 @@ module Euler
     def self.posicao(number)
       Prime.first(number).last
     end
+
+    def self.abaixo(limite)
+      primos = []
+
+      Prime.each(limite) do |pri|
+        if block_given?
+          return yield pri
+        else
+          primos << pri
+        end
+      end
+
+      primos
+    end
   end
 end
