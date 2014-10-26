@@ -8,7 +8,3 @@ __author__ = 'igor rocha'
 
     Find the largest palindrome made from the product of two 3-digit numbers.
 """
-
-from euler import number
-
-print(number.all_divisors(9009))

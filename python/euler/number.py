@@ -24,7 +24,9 @@ def all_divisors(x):
     y = 1
     while y <= sqrt(x):
         if x % y == 0:
-            if not y in div_list: div_list.append(y)
-            if not int(x / y) in div_list: div_list.append(int(x / y))
+            if not y in div_list:
+                div_list.append(y)
+            if not int(x / y) in div_list:
+                div_list.append(int(x / y))
         y += 1
     return div_list
