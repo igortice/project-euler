@@ -8,6 +8,19 @@ __author__ = 'igor rocha'
     What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 """
 
-from euler import number
+result = 20
 
-print(number.is_divisible_by(range(1, 10)))
+continuar = True
+
+while continuar:
+    for num in range(11, 21):
+        if result % num != 0:
+            break
+
+        if num == 20 and result % num == 0:
+            continuar = False
+            break
+
+    result += 20
+
+print(result)
