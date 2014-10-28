@@ -2,6 +2,14 @@ class Integer
   def palindrome?
     self == self.to_s.reverse.to_i
   end
+
+  def fatorial
+    (1..self).inject(:*) || 1
+  end
+
+  def sum_chars
+    self.to_s.chars.map(&:to_i).inject(:+)
+  end
 end
 
 module Euler
