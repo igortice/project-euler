@@ -21,13 +21,7 @@
 =end
 
 
-require 'prime'
-
-class Integer
-  def quantidade_divisores
-    prime_division.transpose.last.inject(1) { |res, ele| res * (ele+1) }
-  end
-end
+require './lib/naturais'
 
 limite_divisores, numero = 500, (1..(i = 7)).inject(:+)
 

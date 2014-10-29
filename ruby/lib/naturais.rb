@@ -10,6 +10,12 @@ class Integer
   def sum_chars
     self.to_s.chars.map(&:to_i).inject(:+)
   end
+
+  def quantidade_divisores
+    require 'prime'
+
+    self.prime_division.transpose.last.inject(1) { |res, ele| res * (ele+1) }
+  end
 end
 
 module Euler
